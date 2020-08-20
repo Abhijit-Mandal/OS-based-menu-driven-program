@@ -13,7 +13,8 @@ while True:
 	elif ("open" in x or "launch" in x or "execute" in x or "start"in x or "run" in x) and ("chrome" in x):
 		if("search" in x):
 			p=input("What do you want to search: ")
-			site="\"chrome https://www.google.com/search?q="+ p +"\""
+			q=p.replace(" ","+")
+			site="\"chrome https://www.google.com/search?q="+ q +"\""
 			os.system(site)
 		else:
 			os.system("chrome")
@@ -21,7 +22,7 @@ while True:
 			p=input("What website do you want to open: ")
 			site="\"chrome "+ p +"\""
 			os.system(site)
-	elif ("open" in x or "launch" in x or "execute" in x or "start"in x or "run" in x) and ("youtube.com" in x or "youtube" in x):
+	elif ("open" in x or "launch" in x or "execute" in x or "start" in x or "run" in x) and ("youtube.com" in x or "youtube" in x):
 			if("play" in x or "search" in x or "video" in x):
 				p=input("Please enter what you want to search in youtube: ")
 				q=p.replace(" ","+")
